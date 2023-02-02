@@ -14,7 +14,7 @@ const MealList = () => {
   }, []);
   return (
     <div>
-      <h2>Meal List !!</h2>
+      <h2 className="text-green-700">Meal List !!</h2>
       {meals.map((meal) => (
         <Meal meal={meal} key={meal.idMeal} />
       ))}
