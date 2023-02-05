@@ -5,7 +5,7 @@ import RandomMeal from "../components/random-meal/RandomMeal";
 
 const Home = () => {
   return (
-    <div className="container md:w-3/4 mx-auto">
+    <div className="container md:w-10/12 mx-auto">
       <MealList />
       <CategoryList />
       <RandomMeal />
