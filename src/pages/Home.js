@@ -1,14 +1,12 @@
 import React from "react";
-import MealList from "../components/meals/MealList";
-import CategoryList from "../components/categories/CategoryList";
-import RandomMeal from "../components/random-meal/RandomMeal";
+import Category from "./Category";
+import Meal from "./Meal";
 
 const Home = () => {
   return (
     <div className="container md:w-10/12 mx-auto">
-      <MealList />
-      <CategoryList />
-      <RandomMeal />
+      <Meal />
+      <Category />
     </div>
   );
 };

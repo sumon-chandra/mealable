@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Meal from "./Meal";
 
 const mealsURL =
   "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
-const MealList = () => {
+const Meal = () => {
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
@@ -16,10 +15,10 @@ const MealList = () => {
     <div>
       <h2 className="text-green-700">Meal List !!</h2>
       {meals.map((meal) => (
-        <Meal meal={meal} key={meal.idMeal} />
+        <h1 className="text-4xl font-bold">Meal: {meal.strMeal}</h1>
       ))}
     </div>
   );
 };
 
-export default MealList;
+export default Meal;

@@ -9,12 +9,16 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
+import Category from "./pages/Category";
+import Meal from "./pages/Meal";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
+      <Route path="category" element={<Category />} />
+      <Route path="meal" element={<Meal />} />
     </Route>
   )
 );
