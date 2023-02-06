@@ -12,7 +12,7 @@ const ToggleBtn = () => {
       <span className="sr-only">Open main menu</span>
       <svg
         className="w-6 h-6"
-        ariaHidden="true"
+        aria-hidden="true"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Navbar from "./components/navbar/Navbar";
 import {
   Route,
   RouterProvider,
@@ -10,7 +9,8 @@ import {
 } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import Category from "./pages/Category";
-import Meal from "./pages/Meal";
+import MealsLayout from "./layouts/MealsLayout";
+import Meals, { mealsLoader } from "./pages/meal/Meals";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +18,9 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="category" element={<Category />} />
-      <Route path="meal" element={<Meal />} />
+      <Route path="meals" element={<MealsLayout />}>
+        <Route index element={<Meals />} loader={mealsLoader} />
+      </Route>
     </Route>
   )
 );

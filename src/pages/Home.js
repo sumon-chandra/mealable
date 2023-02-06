@@ -1,12 +1,15 @@
 import React from "react";
-import Category from "./Category";
-import Meal from "./Meal";
 
 const Home = () => {
   return (
-    <div className="container md:w-10/12 mx-auto">
-      <Meal />
-      <Category />
+    <div className=" bg-yellow-400 p-6">
+      <p>Mealable</p>
+      <p className="py-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        vitae eveniet enim, itaque minima dolore dolorum numquam reiciendis
+        praesentium perspiciatis veritatis eos in magnam at accusantium ipsa?
+        Hic, provident quam.
+      </p>
     </div>
   );
 };
