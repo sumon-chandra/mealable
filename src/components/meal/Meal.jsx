@@ -5,7 +5,7 @@ export default function Meal(props) {
   const meal = props.meal;
   return (
     <Link
-      to="/"
+      to={meal.strMeal}
       className=" bg-slate-50 border  hover:scale-105 ease-in-out duration-300 border-gray-200 rounded-lg shadow-lg relative dark:bg-gray-800 dark:border-gray-700"
     >
       <img className="rounded-t-lg" src={meal.strMealThumb} alt="" />

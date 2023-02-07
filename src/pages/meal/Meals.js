@@ -1,12 +1,11 @@
 import { useLoaderData, Link } from "react-router-dom";
-import Meal from "../../components/Meal";
+import Meal from "../../components/meal/Meal";
 
 export default function Meals() {
   const meals = useLoaderData().meals;
   return (
     <div className="my-4  grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {meals.map((meal) => (
-        // console.log(meal)
         <Meal meal={meal} key={meal.idMeal} />
       ))}
     </div>

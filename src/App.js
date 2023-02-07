@@ -11,6 +11,7 @@ import RootLayout from "./layouts/RootLayout";
 import Category from "./pages/Category";
 import MealsLayout from "./layouts/MealsLayout";
 import Meals, { mealsLoader } from "./pages/meal/Meals";
+import MealDetails, { mealDetailsLoader } from "./pages/meal/MealDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,11 @@ const router = createBrowserRouter(
       <Route path="category" element={<Category />} />
       <Route path="meals" element={<MealsLayout />}>
         <Route index element={<Meals />} loader={mealsLoader} />
+        <Route
+          path=":mealName"
+          element={<MealDetails />}
+          loader={mealDetailsLoader}
+        />
       </Route>
     </Route>
   )
