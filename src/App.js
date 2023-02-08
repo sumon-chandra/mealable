@@ -12,6 +12,8 @@ import Category from "./pages/Category";
 import MealsLayout from "./layouts/MealsLayout";
 import Meals, { mealsLoader } from "./pages/meal/Meals";
 import MealDetails, { mealDetailsLoader } from "./pages/meal/MealDetails";
+import NotFound from "./pages/NotFound";
+import MealsError from "./pages/meal/MealsError";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,8 +27,10 @@ const router = createBrowserRouter(
           path=":mealName"
           element={<MealDetails />}
           loader={mealDetailsLoader}
+          errorElement={<MealsError />}
         />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
