@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 export default function RootLayout() {
   return (
-    <div>
+    <div className="bg-gray-300">
       <header>
         <Navbar />
       </header>

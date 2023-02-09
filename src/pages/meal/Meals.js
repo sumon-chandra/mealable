@@ -46,7 +46,7 @@ export default function Meals() {
           <p
             key={a}
             onClick={(e) => setAlphabet(e?.target.textContent.toLowerCase())}
-            className="text-2xl text-blue-500 hover:text-blue-600 font-bold cursor-pointer"
+            className="text-2xl text-blue-700 hover:text-blue-800 font-bold cursor-pointer"
           >
             {a}
           </p>

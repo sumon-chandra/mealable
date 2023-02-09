@@ -6,21 +6,21 @@ export default function Meal(props) {
   return (
     <Link
       to={meal.strMeal}
-      className=" bg-slate-50 border  hover:scale-[1.02] ease-in-out duration-300 border-gray-200 rounded-lg shadow-lg relative dark:bg-gray-800 dark:border-gray-700"
+      className=" bg-slate-50 border  hover:scale-[1.02] ease-in-out duration-300 border-gray-200 rounded-lg shadow-lg hover:shadow-xl relativ "
     >
       <img className="rounded-t-lg" src={meal.strMealThumb} alt="" />
 
       <div className="py-12 px-5 ">
-        <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 ">
           {meal.strMeal}
         </h5>
 
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-700 ">
           {meal.strInstructions?.substring(0, 100)}...
         </p>
         <Link
-          to="/"
-          className="absolute inline-flex bottom-4 left-5 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          to={meal.strMeal}
+          className="absolute inline-flex bottom-4 left-5 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
         >
           View details
           <svg

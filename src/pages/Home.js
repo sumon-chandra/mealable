@@ -1,8 +1,10 @@
 import React from "react";
+import Banner from "../components/banner/Banner";
 
 const Home = () => {
   return (
-    <div className=" bg-yellow-400 p-6">
+    <div className=" p-6">
+      <Banner />
       <p>Mealable</p>
       <p className="py-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
