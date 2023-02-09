@@ -1,31 +1,68 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Meal from "../../components/meal/Meal";
-
 export default function Meals() {
-  const meals = useLoaderData().meals;
+  const [meals, setMeals] = useState([]);
+  const [alphabet, setAlphabet] = useState("b");
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${alphabet}`;
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setMeals(data.meals));
+  }, [alphabet]);
+
+  const alphabets = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
   return (
     <>
-      <div className="my-4  grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {meals?.map((meal) => (
-          <Meal meal={meal} key={meal.idMeal} />
+      <header className="flex xl:w-1/2 mx-auto gap-4 flex-wrap justify-center">
+        {alphabets.map((a) => (
+          <p
+            key={a}
+            onClick={(e) => setAlphabet(e?.target.textContent.toLowerCase())}
+            className="text-2xl text-blue-500 hover:text-blue-600 font-bold cursor-pointer"
+          >
+            {a}
+          </p>
         ))}
-      </div>
+      </header>
+      {meals ? (
+        <div className="my-4  grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {meals?.map((meal) => (
+            <Meal meal={meal} key={meal.idMeal} />
+          ))}
+        </div>
+      ) : (
+        <p className="text-3xl text-red-500 font-bold text-center mt-16 ">
+          Can't find meal, Click the other alphabet.
+        </p>
+      )}
     </>
   );
 }
-
-// ** Generate random alphabet for random meal
-function randomAlphabet() {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  return alphabet[Math.floor(Math.random() * alphabet.length)];
-}
-
-// ** Loader function
-export const mealsLoader = async () => {
-  const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${randomAlphabet()}`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw Error("Couldn't find that Meal !!!!!! 😓");
-  }
-  return res.json();
-};
