@@ -3,8 +3,8 @@ import React from "react";
 export default function MealTable({ meal }) {
   return (
     <div className="relative overflow-x-auto">
-      <table className="w-full text-sm text-left text-gray-500 ">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 d">
+      <table className="w-full text-sm text-left text-gray-500 border-b border">
+        <thead className="text-xs  uppercase border-b-4">
           <tr>
             <th scope="col" className="px-6 xl:text-2xl py-3">
               Ingredients
@@ -15,7 +15,7 @@ export default function MealTable({ meal }) {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-white border-b ">
+          <tr className=" border-b ">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -24,7 +24,7 @@ export default function MealTable({ meal }) {
             </th>
             <td className="px-6 py-4">{meal.strMeasure1}</td>
           </tr>
-          <tr className="bg-white border-b ">
+          <tr className=" border-b ">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -33,7 +33,7 @@ export default function MealTable({ meal }) {
             </th>
             <td className="px-6 py-4">{meal.strMeasure2}</td>
           </tr>
-          <tr className="bg-white border-b ">
+          <tr className=" border-b ">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -42,7 +42,7 @@ export default function MealTable({ meal }) {
             </th>
             <td className="px-6 py-4">{meal.strMeasure3}</td>
           </tr>
-          <tr className="bg-white border-b ">
+          <tr className=" border-b ">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -52,7 +52,7 @@ export default function MealTable({ meal }) {
             <td className="px-6 py-4">{meal.strMeasure4}</td>
           </tr>
           {meal.strIngredient5 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -63,7 +63,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient6 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -74,7 +74,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient7 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -85,7 +85,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient8 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -96,7 +96,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient9 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -107,7 +107,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient10 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -118,7 +118,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient11 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -129,7 +129,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient12 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -140,7 +140,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient13 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -151,7 +151,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient14 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -162,7 +162,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient15 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -173,7 +173,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient16 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -184,7 +184,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient17 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -195,7 +195,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient18 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -206,7 +206,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient19 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -217,7 +217,7 @@ export default function MealTable({ meal }) {
             </tr>
           )}
           {meal.strIngredient20 && (
-            <tr className="bg-white border-b ">
+            <tr className=" border-b ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "

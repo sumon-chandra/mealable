@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import MealTable from "../../components/meal/MealTable";
 
 export default function MealDetails() {
@@ -9,6 +9,7 @@ export default function MealDetails() {
   }
 
   const meal = useLoaderData().meals[0];
+  const instructions = meal.strInstructions.split(". ");
   return (
     <div>
       <h4 className="text-2xl  xl:text-6xl text-center pb-4 xl:pb-8 font-bold">
@@ -22,7 +23,16 @@ export default function MealDetails() {
       </div>
       <div className="py-4">
         <h3 className="text-3xl font-bold py-8">Instructions</h3>
-        <p className="xl:text-xl">{meal.strInstructions}</p>
+        <ul>
+          {instructions.map((instruction) => (
+            <li
+              key={instruction}
+              className="xl:text-xl font-semibold list-decimal list-inside py-2"
+            >
+              {instruction}.
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="meal-video py-4">

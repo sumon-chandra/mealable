@@ -6,7 +6,7 @@ export default function Meal(props) {
   return (
     <Link
       to={meal.strMeal}
-      className=" bg-slate-50 border  hover:scale-[1.02] ease-in-out duration-300 border-gray-200 rounded-lg shadow-lg hover:shadow-xl relativ "
+      className=" bg-slate-50 border  hover:scale-[1.02] ease-in-out duration-300 border-gray-200 rounded-lg shadow-lg relative hover:shadow-lg"
     >
       <img className="rounded-t-lg" src={meal.strMealThumb} alt="" />
 
