@@ -5,7 +5,7 @@ export default function Category({ category }) {
   return (
     <Link
       to={category.strCategory}
-      className="flex justify-between items-center bg-white p-4 shadow-lg rounded-lg cursor-pointer hover:scale-[1.01]"
+      className="flex justify-between items-center bg-slate-50 border  hover:scale-[1.02] ease-in-out duration-300 border-gray-200 rounded-lg shadow-xl cursor-pointer p-4"
     >
       <h3 className="text-center font-bold text-2xl">{category.strCategory}</h3>
       <img

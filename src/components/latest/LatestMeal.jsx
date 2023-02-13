@@ -7,7 +7,7 @@ export default function LatestMeal() {
       <p className="text-3xl font-bold text-gray-800 text-center py-8">
         Latest Meals
       </p>
-      <div className="grid xl:grid-cols-4 sm:gap-y-4 xl:gap-4">
+      <div className="grid xl:grid-cols-4 xl:gap-10">
         <LatestMealCard />
         <LatestMealCard />
         <LatestMealCard />

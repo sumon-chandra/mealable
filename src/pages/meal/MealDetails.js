@@ -47,7 +47,10 @@ export default function MealDetails() {
       <footer>
         <p className="text-sm font-bold">
           Category:{" "}
-          <Link className="underline underline-offset-2" to="/">
+          <Link
+            className="underline underline-offset-2"
+            to={`/category/${meal.strCategory}`}
+          >
             {meal.strCategory}
           </Link>
         </p>

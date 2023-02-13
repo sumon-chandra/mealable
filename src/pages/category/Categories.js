@@ -1,15 +1,17 @@
 import { useLoaderData } from "react-router-dom";
 import Category from "../../components/category/Category";
 export default function Categories() {
-  const categories = useLoaderData().categories;
+  const categories = useLoaderData();
+
   return (
     <section className=" ">
-      <p className="text-3xl text-gray-800 text-center py-8">
-        Browse meal <span className="font-bold text-blue-700">Categories</span>{" "}
-        and find for yourself.
+      <p className="text-lg xl:text-3xl text-gray-800 text-center py-8">
+        Browse & Explore meal{" "}
+        <span className="font-bold text-blue-700">Categories</span> and find for
+        yourself.
       </p>
       <div className="grid xl:grid-cols-3 grid-cols-1 gap-4">
-        {categories.map((category) => (
+        {categories?.categories.map((category) => (
           <Category category={category} key={category.idCategory} />
         ))}
       </div>

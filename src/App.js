@@ -14,7 +14,10 @@ import NotFound from "./pages/NotFound";
 import MealsError from "./pages/meal/MealsError";
 import Categories, { categoryLoader } from "./pages/category/Categories";
 import ErrorCategory from "./pages/category/ErrorCategory";
-import CategoryDetails from "./pages/category/CategoryDetails";
+import CategoryDetails, {
+  categoryDetailsLoader,
+} from "./pages/category/CategoryDetails";
+import CategoryLayout from "./layouts/CategoryLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,13 +32,18 @@ const router = createBrowserRouter(
           errorElement={<MealsError />}
         />
       </Route>
-      <Route
-        path="category"
-        element={<Categories />}
-        loader={categoryLoader}
-        errorElement={<ErrorCategory />}
-      >
-        <Route path=":categoryName" element={<CategoryDetails />} />
+      <Route path="category" element={<CategoryLayout />}>
+        <Route
+          index
+          element={<Categories />}
+          loader={categoryLoader}
+          errorElement={<ErrorCategory />}
+        />
+        <Route
+          path=":categoryName"
+          element={<CategoryDetails />}
+          loader={categoryDetailsLoader}
+        />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
